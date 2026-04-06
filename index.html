@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tomi Apartment</title>
+  <meta name="description" content="Minimalista apartman kiadó rövid és hosszú távra." />
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --card: #ffffff;
+      --text: #1f1f1f;
+      --muted: #666;
+      --line: #e7e7e7;
+      --accent: #111;
+      --max: 960px;
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 28px 0;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      padding: 36px 0 28px;
+    }
+
+    .hero-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 52px 28px;
+    }
+
+    h1, h2, h3 {
+      margin-top: 0;
+      line-height: 1.15;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 4rem);
+      margin-bottom: 16px;
+    }
+
+    .lead {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 680px;
+      margin-bottom: 28px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      border: 1px solid var(--accent);
+      transition: 0.2s ease;
+      font-weight: 600;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--accent);
+    }
+
+    section {
+      padding: 26px 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 14px;
+    }
+
+    .photo {
+      background: #ddd;
+      border-radius: var(--radius);
+      min-height: 220px;
+      background-size: cover;
+      background-position: center;
+      border: 1px solid var(--line);
+    }
+
+    .photo.large {
+      min-height: 460px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .price {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 8px 0 0;
+    }
+
+    footer {
+      padding: 40px 0 60px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    @media (max-width: 820px) {
+      .grid,
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .photo.large {
+        min-height: 280px;
+      }
+
+      .photo {
+        min-height: 220px;
+      }
+
+      .hero-card {
+        padding: 34px 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="container">
+    <nav class="nav">
+      <a href="#" class="brand">Tomi Apartment</a>
+      <div class="nav-links">
+        <a href="#about">Lakás</a>
+        <a href="#gallery">Képek</a>
+        <a href="#details">Részletek</a>
+        <a href="#contact">Kapcsolat</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-card">
+        <h1>Minimalista apartman<br>kiadó Budapest szívében</h1>
+        <p class="lead">
+          Csendes, világos, igényesen berendezett lakás rövid vagy hosszú távra.
+          Ideális egy főnek vagy párnak.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#contact">Érdeklődöm</a>
+          <a class="btn btn-secondary" href="#details">Részletek</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container">
+      <div class="grid">
+        <div class="card">
+          <h2>Elhelyezkedés</h2>
+          <p class="muted">Budapest, belváros / kerület / utca</p>
+        </div>
+        <div class="card">
+          <h2>Méret</h2>
+          <p class="muted">45 m², 2 szoba</p>
+        </div>
+        <div class="card">
+          <h2>Ár</h2>
+          <p class="price">180 000 Ft / hó</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="container">
+      <h2>Képek</h2>
+      <div class="gallery">
+        <div class="photo large" style="background-image: url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="photo" style="background-image: url('https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80');"></div>
+        <div class="photo" style="background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80');"></div>
+      </div>
+    </section>
+
+    <section id="details" class="container">
+      <div class="card">
+        <h2>Részletek</h2>
+        <p>
+          A lakás teljesen bútorozott, gépesített, világos és csendes.
+          Közel tömegközlekedéshez, boltokhoz, kávézókhoz.
+        </p>
+        <p>
+          <strong>Felszereltség:</strong> wifi, mosógép, hűtő, sütő, légkondi
+        </p>
+        <p>
+          <strong>Bérlés:</strong> minimum 1 hónap / azonnal költözhető
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <div class="card">
+        <h2>Kapcsolat</h2>
+        <p>Érdeklődni itt tudsz:</p>
+        <p><strong>Email:</strong> <a href="mailto:tomi.apartment.rent@gmail.com">tomi.apartment.rent@gmail.com</a></p>
+        <p><strong>Telefon:</strong> +36 30 123 4567</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    © 2026 Tomi Apartment
+  </footer>
+</body>
+</html>
